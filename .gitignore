@@ -1,2 +1,2 @@
-api/cache/graph/
-api/cache/details/
+api/cache/graph/*
+api/cache/details/*
