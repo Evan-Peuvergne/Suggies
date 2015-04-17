@@ -283,6 +283,7 @@
 				if(i>0)
 				{
 					that.dom.input.off();
+					that.dom.loader.css('width', 0);
 					setTimeout(function ()
 					{
 						that.dom.errors.remove('active').addClass('hidden');
