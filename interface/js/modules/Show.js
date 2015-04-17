@@ -89,7 +89,7 @@
 			// Update position
 			this.dom.elem.css({
 				top: this.caracteristics.position.distance,
-				transformOrigin: '0px ' + ((metrics.size/2) - this.caracteristics.position.distance) + 'px',
+				transformOrigin: '50% ' + ((metrics.size/2) - this.caracteristics.position.distance) + 'px',
 				transform: 'rotate(' + that.caracteristics.position.radius + 'deg)',
 				animationDelay: (2+0.1*i) +'s'
 			});
@@ -122,7 +122,7 @@
 				// Update position
 				this.dom.elem.css({
 					top: this.caracteristics.position.distance,
-					transformOrigin: '0px ' + ((metrics.size/2) - this.caracteristics.position.distance) + 'px',
+					transformOrigin: '50% ' + ((metrics.size/2) - this.caracteristics.position.distance) + 'px',
 					transform: 'rotate(' + that.caracteristics.position.radius + 'deg)'
 				});	
 

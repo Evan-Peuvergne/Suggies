@@ -138,11 +138,10 @@
 			module.dom.graph.addClass('loading');
 
 			// Change url
-			console.log(module);
 			window.history.pushState({
 				page: 'graph',
 				id: module.id
-			}, module.show.name, module.show.name.replace(/\s+/g, '').replace(/\W/g, ''));
+			}, module.show.name, module.show.id);
 
 			// Graph
 			onGraphLoaded(module);

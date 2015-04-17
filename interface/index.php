@@ -22,8 +22,8 @@
 	
 
 	<div class="main-loader">
-		<h1><img width="300" src="interface/assets/medias/images/logo4.svg" alt=""></h1>
-		<h2>Lorem ipsum dolor est verti.</h2>
+		<h1><img width="300" src="interface/assets/medias/images/logo2.svg" alt=""></h1>
+		<h2>Partez à la découverte de nouvelles séries</h2>
 		<span>Chargement ...</span>
 		<img src="interface/assets/medias/images/loader.svg" alt="">
 	</div>

@@ -120,7 +120,7 @@
 			that.dom.buttons.watchlist.click(function (e)
 			{
 				e.preventDefault();
-				that.watchlist();
+				that.getToken();
 			})
 
 			// Callback
@@ -136,7 +136,7 @@
 		/* WATCHLIST */
 
 
-		this.watchlist = function ()
+		this.getToken = function ()
 		{
 			var request = $.ajax({
 				type: 'GET',
@@ -149,6 +149,35 @@
 				window.location = 'https://www.themoviedb.org/authenticate/' + token + '?redirect_to='+window.location;
 			});
 		}
+
+		this.addToWatchlist = function (token)
+		{
+			var request = $.ajax({
+				type: 'GET',
+				url: 'http://api.themoviedb.org/3/authentication/session/new?api_key=4163044cd4323f71ac228a10c1a487d6&request_token='+token
+			});
+
+			request.done(function (data)
+			{
+				var sessionId = data.session_id;
+
+				var request = $.ajax({
+					type: 'POST',
+					url: 'http://api.themoviedb.org/3/account/' + sessionId + '/watchlist?api_key=4163044cd4323f71ac228a10c1a487d6',
+					data: {
+						media_type: 'tv',
+						media_id: that.data.id,
+						watchlist: true
+					}
+				});
+
+				request.done(function (data)
+				{
+					console.log(data);
+				})
+
+			});
+		};
 
 
 
