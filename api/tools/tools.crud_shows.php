@@ -62,8 +62,9 @@ class CacheShow {
 
 		$this->similar["sections"]["genre"]=Array();
 		$this->similar["sections"]["origin"]=Array();
-		$this->similar["sections"]["eps_length"]=Array();
+		$this->similar["sections"]["duration"]=Array();
 
+		$index = 0;
 		foreach ($this->similar["shows"] as $show){
 			if (!array_key_exists($show["genre"], $this->similar["sections"]["genre"])){
 				$this->similar["sections"]["genre"][$show["genre"]] = 0;
@@ -87,11 +88,21 @@ class CacheShow {
 			}
 			$this->similar["sections"]["origin"][$show["origin"]]++;
 
-			$show['eps_length'] = get_eps_length($show['id']);
-			if (!array_key_exists($show["eps_length"], $this->similar["sections"]["eps_length"])){
-				$this->similar["sections"]["eps_length"][$show["eps_length"]] = 0;
+			$show['duration'] = get_eps_length($show['id']);
+			if ($show['duration'] <= 30){
+				$length = "short";
+			} else if ($show['duration'] >30 && $show['duration'] <= 50 ) {
+				$length = "regular";
+			} else {
+				$length = "long";
 			}
-			$this->similar["sections"]["eps_length"][$show["eps_length"]]++;
+			print($show['duration']);
+			$this->similar['shows'][$index]['duration'] = $length;
+			if (!array_key_exists($length, $this->similar["sections"]["duration"])){
+				$this->similar["sections"]["duration"][$length] = 0;
+			}
+			$this->similar["sections"]["duration"][$length]++;
+			$index++;
 		}		
 	}
 
@@ -147,11 +158,9 @@ class CacheShow {
 	}
 
 	public function set_graph_cache_file(){
-		//$this->set_name_and_id();
 		$this->set_data();
 		$this->set_meta();
 		$this->set_keywords();
-		//print json_encode($this->keywords).PHP_EOL;
 		$this->set_similars();
 		$this->set_sections();
 		$this->set_similarity();
@@ -245,7 +254,7 @@ function get_eps_length($show_id){
 		$ShowDetails->cache_file->episode_run_time[0] = 30;
 	}
 	$ShowLength = $ShowDetails->cache_file->episode_run_time[0];
-	return strval($ShowLength);
+	return $ShowLength;
 }
 
 
