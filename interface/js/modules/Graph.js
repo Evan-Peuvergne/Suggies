@@ -100,6 +100,13 @@
 				that.dom.aside = that.dom.elem.find('.infos');
 				that.dom.search = that.dom.elem.find('.btn-search');
 
+				// Manage error click
+				that.dom.errors.click(function (e)
+				{
+					// Simulate click on search icon
+					that.dom.search.click();
+				})
+
 				// Update current show
 				that.dom.show.css('background', 'url(http://image.tmdb.org/t/p/w500' + that.show.poster_path + ')');
 				
@@ -149,9 +156,18 @@
 			// Success
 			request.done(function (data)
 			{
-				console.log(data);
-				// Add suggestions
-				addSuggestions(module, data.response.similar, onSuggestionsLoaded);
+				if(data.response.length > 0 && data.response.similar.length > 0)
+				{
+					// Add suggestions
+					addSuggestions(module, data.response.similar, onSuggestionsLoaded);
+				}
+				else{ module.handle("Malheureusement, nous n'avons pu trouver aucune suggestions pour cette série"); }
+			});
+
+			// Fail
+			request.fail(function (data)
+			{
+				module.handle();
 			});
 		}
 
@@ -236,19 +252,11 @@
 
 		/* HANDLE ERROR */
 
-		this.handle = function (message, link)
+		this.handle = function (message)
 		{
 			// Display message
-			if(!link){ that.dom.errors.html(message); }
-			else{ 
-				var error = $('<a href="#">' + message + link.name + '</a>');
-				error.find('a').click(function (e)
-				{
-					e.preventDefault();
-					link.callback();
-				});
-				that.dom.errors.append(error);
-			}
+			if(!message){ message = 'Nous sommes désolé, mais un problème technique est survenu'; }
+			that.dom.errors.html(message);
 
 			// Show
 			that.dom.errors.addClass('active');
