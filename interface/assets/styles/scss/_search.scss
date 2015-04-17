@@ -1,0 +1,192 @@
+	
+	/* SEARCH */
+
+	.module.module-search{
+
+		.container{
+			
+			width:600px;
+			height:100%;
+			margin:auto;
+			display: flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:center;
+
+			form{
+
+				display: block;
+				position:relative;
+				z-index:100;
+				width:100%;
+				height:5rem;
+				font-size:2rem;
+				margin-bottom:3rem;
+				border-bottom:1px solid darken($background, 30%);
+				background-color:$background;
+				overflow:hidden;
+
+				input{
+
+					width:100%;
+					height:4rem;
+					font-size:2rem;
+					font-family: $content;
+					font-weight:200;
+					color:darken($background, 30%);
+					text-transform: uppercase;
+
+					&::-webkit-input-placeholder {
+					   position:relative;
+					   top:0.4rem;
+					}
+
+					&:-moz-placeholder { /* Firefox 18- */
+					   position:relative;
+					   top:0.4rem; 
+					}
+
+					&::-moz-placeholder {  /* Firefox 19+ */
+					   position:relative;
+					   top:0.4rem;
+					}
+
+					&:-ms-input-placeholder {  
+					   position:relative;
+					   top:0.4rem; 
+					}
+
+				}
+
+				.loader{
+
+					position:absolute;
+					bottom:-2px;
+					left:0;
+					width:0%;
+					height:3px;
+					background-color:$main;
+					transition: width 0.3s ease;
+
+				}
+				
+			}
+
+			ul{
+				
+				display: block;
+				// display: flex;
+				position:relative;
+				z-index:50;
+				// flex-wrap:wrap;
+				width:100%;
+				height:21rem;
+
+				li{
+
+					display: inline-block;
+					vertical-align: top;
+					width:calc(20% - 1rem);
+					position:relative;
+					margin-right:1rem;
+					margin-bottom:1rem;
+					cursor:pointer;
+					border-radius:0.5rem;
+					overflow: hidden;
+
+					&:nth-child(5), &:nth-child(10){
+
+						margin-right:0;
+
+					}
+
+					img{
+
+						display: block;
+						position:relative;
+						z-index:10;
+						width:100%;
+						height:auto;
+
+					}
+
+					&:after{
+
+						display: flex;
+						justify-content:center;
+						align-items:center;
+						content:'Voir';
+						font-size:1.2rem;
+						font-weight:700;
+						font-family: $titles;
+						text-transform: uppercase;
+						position:absolute;
+						z-index:20;
+						top:0;
+						left:0;
+						bottom:0;
+						right:0;
+						background-color:rgba($main, 0.7);
+						opacity:0;
+						color:#fefefe;
+						border-radius:0.5rem;
+						transition:all 0.2s ease;
+
+					}
+
+					&:hover:after{
+
+						opacity:1;
+
+					}
+
+					&.loading:after{
+				
+						content:url(interface/assets/medias/images/loader_blanc.svg);
+						opacity:1;
+
+					}
+
+					&.remove{
+
+						animation-name:'HideByFadeOut';
+						animation-duration:0.9s;
+						animation-delay:0s;
+						animation-timing-function:ease;
+						animation-fill-mode:both;
+
+					}
+
+				}			
+
+			}
+
+		}
+
+		
+
+		// Animations
+
+		&.opened{
+
+			li{
+
+				animation-name:'ShowByEnterFromBottom';
+				animation-duration:1.3s;
+				animation-delay:1.2s;
+				animation-timing-function:ease;
+				animation-fill-mode:both;
+
+				&:nth-child(n+6){
+					
+					animation-delay:1.5s;
+					animation-duration:1s;
+
+				}
+
+			}
+
+		}
+
+
+	}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Graph</title>
+	<link rel="stylesheet" href="../assets/styles/css/app.css">
+</head>
+<body>
+
+	<div class="module module-graph">
+		
+		<article class="graph loading">
+					
+			<div class="graph-background">
+				<div class="graph-background-1" style="background-image: url(http://image.tmdb.org/t/p/w500/jIhL6mlT7AblhbHJgEoiBIOUVl1.jpg)"></div>
+				<div class="graph-background-2"></div>
+				<div class="graph-background-3"></div>
+				<div class="graph-background-4"></div>
+				<div class="graph-background-5"></div>
+			</div>
+
+			<ul class="graph-shows">
+				<li class="show show-filter-1" data-proximity="20"><span>Friends</span></li>
+				<!-- <li class="show" data-proximity="32"><span>Friends</span></li>
+				<li class="show" data-proximity="76"><span>Friends</span></li>
+				<li class="show" data-proximity="100"><span>Friends</span></li>
+				<li class="show" data-proximity="18"><span>Friends</span></li> -->
+			</ul>
+
+			<ul class="graph-labels">
+				<li><span>Etats Unis</span></li>
+			</ul>
+
+			<ul class="graph-filters">
+				<li><span>Genre</span></li>
+				<li><span>Durée</span></li>
+				<li><span>Origine</span></li>
+			</ul>
+
+		</article>
+
+		<aside class="infos">
+			<a href="#" class="btn-search"><img src="../assets/medias/images/search.svg" alt=""></a>
+			<div class="aside">
+				<div class="aside-header" style="background-image: url(http://image.tmdb.org/t/p/w500/9ZuWc3wWPDvWWterM0DlQxjhCBR.jpg);">
+					<div class="filter"></div>
+					<h1>Lorem ipsum dolor ddddd dddddl ddjd</h1>
+					<div class="buttons">
+						<a href="#" class="btn-suggest"></a>
+						<a class="btn-play" href="#"></a>
+					</div>
+					<ul class="rates">
+						<li class="fill"></li>
+						<li class="fill"></li>
+						<li class="fill"></li>
+						<li class="fill"></li>
+						<li class="empty"></li>
+					</ul>
+				</div>
+				<div class="aside-content">
+					<section>
+						<h2>Synopsis</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam in nemo eveniet quasi, quis unde accusamus aspernatur itaque sunt obcaecati ipsam dolores omnis voluptas aliquid quia, ea molestiae autem fugit.</p>
+					</section>
+					<section>
+						<h2>Synopsis</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam in nemo eveniet quasi, quis unde accusamus aspernatur itaque sunt obcaecati ipsam dolores omnis voluptas aliquid quia, ea molestiae autem fugit.</p>
+					</section>
+				</div>
+			</div>
+		</aside>
+
+	</div>
+	
+</body>
+</html>
+
+<script src="../js/vendors/jquery.js"></script>
+
+<script>
+	
+$(document).ready(function ()
+{
+
+
+	var graph = $('.graph');
+	graph.width(graph.height());
+
+	$('.graph-filters li').click(function (e)
+	{
+		$(this).addClass('loading');
+	});
+
+	// var $shows = $('.show'),
+	// 	count  = $shows.length,
+	// 	index  = 0;
+	// $shows.each(function()
+	// {
+	// 	var $show     = $(this),
+	// 		proximity = $show.data('proximity'),
+	// 		progress  = index++ / count,
+	// 		x         = Math.sin(progress * Math.PI * 2) * proximity * (237/100),
+	// 		y         = Math.cos(progress * Math.PI * 2) * proximity * (237/100);
+
+	// 	$show.css({
+	// 		transform : 'translateX('+x+'px) translateY('+y+'px)'
+	// 	});
+	// });
+
+
+
+});
+
+</script>

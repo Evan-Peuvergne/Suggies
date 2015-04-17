@@ -1,0 +1,126 @@
+
+	
+	/* IMPORTS */
+
+	
+	@import 'reset';
+	@import 'animations';
+
+
+
+
+
+	/* VARIABLES */
+
+
+	// Colors
+
+	// $background : #ebebeb;
+	$background: #fbfcfc;
+	$main: #80cdc7;
+	$blanc: #fefefe;
+	$filters: #3498db, #e74c3c, #f1c40f, #34495e, #9b59b6, #e67e22, #1abc9c;	
+
+
+	// Fonts
+
+	$titles : "Futura STD", "Helvetica Neue", sans serif;
+	$content: "Lato", sans serif;
+
+
+
+
+
+	/* BOOTSTRAP */
+
+	html, body{
+
+		width:100%;
+		height:100%;
+		overflow: hidden;
+		position:absolute;
+		top:0;
+		left:0;
+
+	}
+
+	body{
+
+		font-size:12px;
+		font-family: $content;
+
+	}
+
+	h1, h2, h3, h4, h5, h6, .title{
+
+		font-family: $titles;
+
+	}
+
+	.module{
+
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background-color:$background;
+		overflow: hidden;
+
+		&.opened{
+
+			animation-name:'ShowByEnterFromBottom';
+			animation-duration:1s;
+			animation-delay:1s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+
+		}
+
+		&.hidden{
+
+			animation-name:'HideByLeavingToTop';
+			animation-duration:1s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+
+		}
+
+	}
+
+
+
+
+
+	/* MAIN LOADER */
+
+	.main-loader{
+
+		&.hidden{
+
+			animation-name:'HideByFadeOut';
+			animation-duration:1s;
+			animation-timing-function:ease;
+			animation-fill-mode:both;
+
+		}
+
+	}
+
+
+
+
+	/* SEARCH */
+
+
+	@import 'search';
+
+
+
+
+
+	/* GRAPH */
+
+
+	@import 'graph';
+	@import 'aside';

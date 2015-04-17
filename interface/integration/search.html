@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Search</title>
+
+	<style>
+
+		html, body{ width:100%; height:100%; overflow:hidden;} 
+		body{ background-color:#ebebeb; font-family:"Lato"; color:#272727; font-size:12px; font-weight:400; }
+		.main-loader{ width:100%; height: 100%; display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display:flex; display:flex; -webkit-box-direction:column; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction:column; -webkit-justify-content:center; -ms-justify-content:center; justify-content:center; -webkit-align-items:center; -ms-align-items:center; align-items:center; }
+		.main-loader h1{ font-size:3rem; font-family:"Futura STD"; font-weight:700; text-transform: uppercase; margin:0; margin-bottom:1rem; }
+		.main-loader h2{ font-size:1.2rem; font-weight:400; text-transform: uppercase; margin:0; margin-bottom:3rem; }
+		.main-loader p{ width:500px; max-width:80%; margin:0 auto; font-size:1.1rem; text-align:center; line-height:1.4; margin-bottom:4rem; }
+		.main-loader span{ color:#80cdc7; margin-bottom:1rem; text-transform: uppercase; }
+
+	</style>
+
+	<link rel="stylesheet" href="../assets/styles/css/app.css">
+
+</head>
+<body>
+
+	<div class="module module-search">
+		<div class="container">
+
+			<form>
+				<input class="loading" type="text" placeholder="Votre série">
+				<div class="loader"></div>
+			</form>
+			
+			<ul>
+				<li>
+					<img src="http://image.tmdb.org/t/p/w500/4yMXf3DW6oCL0lVPZaZM2GypgwE.jpg" alt="">
+				</li>
+				<li>
+					<img src="http://image.tmdb.org/t/p/w500/4yMXf3DW6oCL0lVPZaZM2GypgwE.jpg" alt="">
+				</li>
+				<li>
+					<img src="http://image.tmdb.org/t/p/w500/4yMXf3DW6oCL0lVPZaZM2GypgwE.jpg" alt="">
+				</li>
+				<li>
+					<img src="http://image.tmdb.org/t/p/w500/4yMXf3DW6oCL0lVPZaZM2GypgwE.jpg" alt="">
+				</li>
+				<li>
+					<img src="http://image.tmdb.org/t/p/w500/4yMXf3DW6oCL0lVPZaZM2GypgwE.jpg" alt="">
+				</li>
+				<li>
+					<img src="http://image.tmdb.org/t/p/w500/4yMXf3DW6oCL0lVPZaZM2GypgwE.jpg" alt="">
+				</li>
+				<li>
+					<img src="http://image.tmdb.org/t/p/w500/4yMXf3DW6oCL0lVPZaZM2GypgwE.jpg" alt="">
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	
+</body>
+</html>
+
+<script src="../js/vendors/jquery.js"></script>
+<script>
+	
+$(document).ready(function ()
+{
+
+
+	$('li').click(function (e)
+	{
+		e.preventDefault();
+		$(this).addClass('loading');
+	})
+
+
+});
+
+</script>

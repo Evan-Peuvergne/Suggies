@@ -1,0 +1,1428 @@
+/* IMPORTS */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+body {
+  line-height: 1; }
+
+/* line 34, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+ol, ul {
+  list-style: none; }
+
+/* line 37, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+blockquote, q {
+  quotes: none; }
+
+/* line 41, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* apply a natural box layout model to all elements */
+/* line 51, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+*, *::before, *::after, *:before, *:after {
+  box-sizing: border-box; }
+
+/* inputs */
+/* line 56, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+input, button, textarea, select {
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  border-radius: 0;
+  -webkit-padding-start: 0;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-index: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  line-height: 1em; }
+
+/* inputs appearance (not for every input)  */
+/* line 79, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+input[type=text], input[type=reset], input[type=password], input[type=search], input[type=email], input[type=tel], input[type=url], input[type=time], input[type=week], input[type=month], input[type=date], input[type=datetime], input[type=datetime-local], input[type=number], input[type=submit], input[type=reset], input[type=color], input[type=file], button, textarea, select {
+  height: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+/* input color width */
+/* line 87, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+input[type=color] {
+  width: 1em; }
+
+/* IE clear cross */
+/* line 92, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+input::-ms-clear {
+  display: none; }
+
+/* details and summary */
+/* line 97, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+details, summary {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+/* text size adjusting */
+/* line 104, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%; }
+
+/* mark */
+/* line 111, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+mark {
+  background: none; }
+
+/* Font smoothing */
+/* line 114, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+*, *::before, *::after, *:before, *:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* hr */
+/* line 120, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+hr {
+  height: 1px;
+  margin: 0;
+  padding: 0; }
+
+/* u */
+/* line 126, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+u {
+  text-decoration: none; }
+
+/* th */
+/* line 131, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+table th {
+  text-align: left; }
+
+/* a */
+/* line 136, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/reset */
+a {
+  color: inherit;
+  outline: none; }
+
+/* HIDE */
+@-webkit-keyframes HideByFadeOut {
+  /* line 10, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 1; }
+
+  /* line 16, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    display: none;
+    opacity: 0; } }
+@keyframes HideByFadeOut {
+  /* line 10, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 1; }
+
+  /* line 16, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    display: none;
+    opacity: 0; } }
+
+@-webkit-keyframes HideByLeavingToTop {
+  /* line 30, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; }
+
+  /* line 37, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%); } }
+
+@keyframes HideByLeavingToTop {
+  /* line 30, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; }
+
+  /* line 37, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%); } }
+
+@-webkit-keyframes HideByLeavingToBottom {
+  /* line 51, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; }
+
+  /* line 58, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); } }
+
+@keyframes HideByLeavingToBottom {
+  /* line 51, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; }
+
+  /* line 58, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); } }
+
+/* SHOW */
+@-webkit-keyframes ShowByFadeIn {
+  /* line 77, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 0; }
+
+  /* line 83, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 1; } }
+@keyframes ShowByFadeIn {
+  /* line 77, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 0; }
+
+  /* line 83, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes ShowByEnterFromBottom {
+  /* line 96, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+
+  /* line 103, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes ShowByEnterFromBottom {
+  /* line 96, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+
+  /* line 103, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes ShowByEnterFromRight {
+  /* line 117, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%); }
+
+  /* line 123, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes ShowByEnterFromRight {
+  /* line 117, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%); }
+
+  /* line 123, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes ShowBySlidingFromRight {
+  /* line 136, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px); }
+
+  /* line 143, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes ShowBySlidingFromRight {
+  /* line 136, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px); }
+
+  /* line 143, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes ShowByEnterWithCircularScaling {
+  /* line 157, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+
+  /* line 165, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes ShowByEnterWithCircularScaling {
+  /* line 157, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7); }
+
+  /* line 165, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes ShowBySlidingFromLeft {
+  /* line 180, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    display: block;
+    opacity: 0;
+    margin-left: -2rem; }
+
+  /* line 188, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    display: block;
+    opacity: 1;
+    margin-left: 0; } }
+
+@keyframes ShowBySlidingFromLeft {
+  /* line 180, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    display: block;
+    opacity: 0;
+    margin-left: -2rem; }
+
+  /* line 188, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    display: block;
+    opacity: 1;
+    margin-left: 0; } }
+
+@-webkit-keyframes ShowByRolling {
+  /* line 203, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg); }
+
+  /* line 211, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes ShowByRolling {
+  /* line 203, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  0% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: rotate(-60deg);
+            transform: rotate(-60deg); }
+
+  /* line 211, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/animations */
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+/* VARIABLES */
+/* BOOTSTRAP */
+/* line 36, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 47, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+body {
+  font-size: 12px;
+  font-family: "Lato", sans serif; }
+
+/* line 54, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: "Futura STD", "Helvetica Neue", sans serif; }
+
+/* line 60, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+.module {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fbfcfc;
+  overflow: hidden; }
+  /* line 70, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+  .module.opened {
+    -webkit-animation-name: 'ShowByEnterFromBottom';
+            animation-name: 'ShowByEnterFromBottom';
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+  /* line 80, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+  .module.hidden {
+    -webkit-animation-name: 'HideByLeavingToTop';
+            animation-name: 'HideByLeavingToTop';
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+
+/* MAIN LOADER */
+/* line 99, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+.main-loader.hidden {
+  -webkit-animation-name: 'HideByFadeOut';
+          animation-name: 'HideByFadeOut';
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+/* SEARCH */
+/* SEARCH */
+/* line 6, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+.module.module-search .container {
+  width: 600px;
+  height: 100%;
+  margin: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  /* line 16, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+  .module.module-search .container form {
+    display: block;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 5rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #a4baba;
+    background-color: #fbfcfc;
+    overflow: hidden; }
+    /* line 29, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+    .module.module-search .container form input {
+      width: 100%;
+      height: 4rem;
+      font-size: 2rem;
+      font-family: "Lato", sans serif;
+      font-weight: 200;
+      color: #a4baba;
+      text-transform: uppercase; }
+      /* line 39, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container form input::-webkit-input-placeholder {
+        position: relative;
+        top: 0.4rem; }
+      /* line 44, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container form input:-moz-placeholder {
+        /* Firefox 18- */
+        position: relative;
+        top: 0.4rem; }
+      /* line 49, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container form input::-moz-placeholder {
+        /* Firefox 19+ */
+        position: relative;
+        top: 0.4rem; }
+      /* line 54, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container form input:-ms-input-placeholder {
+        position: relative;
+        top: 0.4rem; }
+    /* line 61, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+    .module.module-search .container form .loader {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background-color: #80cdc7;
+      transition: width 0.3s ease; }
+  /* line 75, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+  .module.module-search .container ul {
+    display: block;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    height: 21rem; }
+    /* line 85, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+    .module.module-search .container ul li {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(20% - 1rem);
+      position: relative;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      overflow: hidden; }
+      /* line 97, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container ul li:nth-child(5), .module.module-search .container ul li:nth-child(10) {
+        margin-right: 0; }
+      /* line 103, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container ul li img {
+        display: block;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: auto; }
+      /* line 113, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container ul li:after {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        content: 'Voir';
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: "Futura STD", "Helvetica Neue", sans serif;
+        text-transform: uppercase;
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(128, 205, 199, 0.7);
+        opacity: 0;
+        color: #fefefe;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease; }
+      /* line 137, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container ul li:hover:after {
+        opacity: 1; }
+      /* line 143, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container ul li.loading:after {
+        content: url(interface/assets/medias/images/loader_blanc.svg);
+        opacity: 1; }
+      /* line 150, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container ul li.remove {
+        -webkit-animation-name: 'HideByFadeOut';
+                animation-name: 'HideByFadeOut';
+        -webkit-animation-duration: 0.9s;
+                animation-duration: 0.9s;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
+        -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both; }
+/* line 172, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+.module.module-search.opened li {
+  -webkit-animation-name: 'ShowByEnterFromBottom';
+          animation-name: 'ShowByEnterFromBottom';
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+  /* line 180, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+  .module.module-search.opened li:nth-child(n+6) {
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s; }
+
+/* GRAPH */
+/* MODULE GRAPH */
+/* line 7, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module.module-graph {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* GRAPH */
+/* line 20, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.graph {
+  position: relative;
+  height: calc(100% - 10rem);
+  margin: 4rem 10rem 4rem 6rem; }
+  /* line 28, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .graph .graph-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    /* line 38, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-background .graph-background-1 {
+      width: 20%;
+      height: 20%;
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      border-radius: 100%;
+      border: 1px solid rgba(134, 165, 165, 0.6); }
+    /* line 38, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-background .graph-background-2 {
+      width: 40%;
+      height: 40%;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      border-radius: 100%;
+      border: 1px solid rgba(134, 165, 165, 0.5); }
+    /* line 38, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-background .graph-background-3 {
+      width: 60%;
+      height: 60%;
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      border-radius: 100%;
+      border: 1px solid rgba(134, 165, 165, 0.4); }
+    /* line 38, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-background .graph-background-4 {
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      border-radius: 100%;
+      border: 1px solid rgba(134, 165, 165, 0.3); }
+    /* line 38, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-background .graph-background-5 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      border-radius: 100%;
+      border: 1px solid rgba(134, 165, 165, 0.2); }
+    /* line 52, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-background .graph-background-1 {
+      background-size: cover !important;
+      position: relative;
+      background-position: center;
+      border: 4px solid #80cdc7;
+      transition: all 0.3s ease;
+      overflow: hidden; }
+      /* line 63, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-background .graph-background-1.graph-filter-1 {
+        border-color: #3498db; }
+      /* line 63, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-background .graph-background-1.graph-filter-2 {
+        border-color: #e74c3c; }
+      /* line 63, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-background .graph-background-1.graph-filter-3 {
+        border-color: #f1c40f; }
+      /* line 63, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-background .graph-background-1.graph-filter-4 {
+        border-color: #34495e; }
+      /* line 63, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-background .graph-background-1.graph-filter-5 {
+        border-color: #9b59b6; }
+      /* line 63, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-background .graph-background-1.graph-filter-6 {
+        border-color: #e67e22; }
+  /* line 82, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .graph .graph-background-1:after {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    content: url(interface/assets/medias/images/loader_blanc.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(134, 165, 165, 0.5); }
+  /* line 106, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .graph.loading-ended .graph-background-1:after {
+    -webkit-animation-name: 'HideByFadeOut';
+            animation-name: 'HideByFadeOut';
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s; }
+  /* line 123, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .graph .graph-shows {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    /* line 132, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-shows li {
+      position: absolute;
+      left: calc(50% - 0.75rem);
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      transition: all 1s ease; }
+      /* line 146, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        width: 60%;
+        height: 60%;
+        border-radius: 60%;
+        transition: all 1s ease; }
+      /* line 160, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li span {
+        display: none;
+        width: 500px;
+        position: absolute;
+        left: 2.5rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        -webkit-transform-origin: 0 -2.5px;
+            -ms-transform-origin: 0 -2.5px;
+                transform-origin: 0 -2.5px; }
+      /* line 177, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.show-filter-1 {
+        background-color: rgba(52, 152, 219, 0.5); }
+        /* line 181, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-1:after {
+          background-color: rgba(52, 152, 219, 0.4); }
+        /* line 187, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-1 span {
+          color: rgba(52, 152, 219, 0.8); }
+      /* line 177, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.show-filter-2 {
+        background-color: rgba(231, 76, 60, 0.5); }
+        /* line 181, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-2:after {
+          background-color: rgba(231, 76, 60, 0.4); }
+        /* line 187, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-2 span {
+          color: rgba(231, 76, 60, 0.8); }
+      /* line 177, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.show-filter-3 {
+        background-color: rgba(241, 196, 15, 0.5); }
+        /* line 181, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-3:after {
+          background-color: rgba(241, 196, 15, 0.4); }
+        /* line 187, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-3 span {
+          color: rgba(241, 196, 15, 0.8); }
+      /* line 177, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.show-filter-4 {
+        background-color: rgba(52, 73, 94, 0.5); }
+        /* line 181, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-4:after {
+          background-color: rgba(52, 73, 94, 0.4); }
+        /* line 187, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-4 span {
+          color: rgba(52, 73, 94, 0.8); }
+      /* line 177, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.show-filter-5 {
+        background-color: rgba(155, 89, 182, 0.5); }
+        /* line 181, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-5:after {
+          background-color: rgba(155, 89, 182, 0.4); }
+        /* line 187, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-5 span {
+          color: rgba(155, 89, 182, 0.8); }
+      /* line 177, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.show-filter-6 {
+        background-color: rgba(230, 126, 34, 0.5); }
+        /* line 181, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-6:after {
+          background-color: rgba(230, 126, 34, 0.4); }
+        /* line 187, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-6 span {
+          color: rgba(230, 126, 34, 0.8); }
+      /* line 197, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li:hover span {
+        display: block;
+        -webkit-animation-name: 'ShowBySlidingFromLeft';
+                animation-name: 'ShowBySlidingFromLeft';
+        -webkit-animation-duration: 0.4s;
+                animation-duration: 0.4s;
+        -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both; }
+      /* line 207, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.visible {
+        display: block; }
+      /* line 213, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.hidden {
+        display: none; }
+  /* line 226, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .graph .graph-labels {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    /* line 235, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-labels li {
+      position: absolute;
+      left: calc(50% - 70px);
+      width: 140px;
+      top: -20px;
+      text-align: center;
+      -webkit-transform-origin: 50% 278px;
+          -ms-transform-origin: 50% 278px;
+              transform-origin: 50% 278px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-family: "Futura STD", "Helvetica Neue", sans serif;
+      opacity: 0;
+      -webkit-animation-name: 'ShowByFadeIn';
+              animation-name: 'ShowByFadeIn';
+      -webkit-animation-duration: 1s;
+              animation-duration: 1s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; }
+      /* line 263, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.filter-label-1 {
+        color: #3498db;
+        -webkit-animation-delay: 0.05s;
+                animation-delay: 0.05s; }
+      /* line 263, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.filter-label-2 {
+        color: #e74c3c;
+        -webkit-animation-delay: 0.1s;
+                animation-delay: 0.1s; }
+      /* line 263, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.filter-label-3 {
+        color: #f1c40f;
+        -webkit-animation-delay: 0.15s;
+                animation-delay: 0.15s; }
+      /* line 263, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.filter-label-4 {
+        color: #34495e;
+        -webkit-animation-delay: 0.2s;
+                animation-delay: 0.2s; }
+      /* line 263, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.filter-label-5 {
+        color: #9b59b6;
+        -webkit-animation-delay: 0.25s;
+                animation-delay: 0.25s; }
+      /* line 263, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.filter-label-6 {
+        color: #e67e22;
+        -webkit-animation-delay: 0.3s;
+                animation-delay: 0.3s; }
+      /* line 272, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.hide {
+        -webkit-animation-name: 'HideByFadeOut';
+                animation-name: 'HideByFadeOut';
+        -webkit-animation-duration: 0.8;
+                animation-duration: 0.8;
+        -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s; }
+  /* line 289, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .graph .graph-filters {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    z-index: 40;
+    bottom: -4rem;
+    left: 0;
+    width: 100%;
+    text-align: center; }
+    /* line 300, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .graph .graph-filters li {
+      position: relative;
+      border: 2px solid #c1d0d0;
+      border-left: none;
+      padding: 0.7rem 2rem;
+      background-color: #fefefe;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+      color: #293636;
+      transition: all 0.3s ease;
+      overflow: hidden; }
+      /* line 314, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-filters li:first-child {
+        border-top-left-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
+        border-left: 2px solid #c1d0d0; }
+      /* line 322, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-filters li:last-child {
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem; }
+      /* line 329, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-filters li:hover, .graph .graph-filters li.active, .graph .graph-filters li.loading {
+        background-color: rgba(193, 208, 208, 0.5); }
+      /* line 335, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-filters li:before {
+        display: block;
+        content: url(interface/assets/medias/images/loader_vert.svg);
+        position: absolute;
+        top: 0.6rem;
+        left: 0.8rem;
+        -webkit-transform: translateX(-3rem);
+            -ms-transform: translateX(-3rem);
+                transform: translateX(-3rem);
+        transition: all 0.3s ease; }
+      /* line 347, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-filters li.loading {
+        padding-left: 3rem; }
+        /* line 351, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-filters li.loading:before {
+          -webkit-transform: none;
+              -ms-transform: none;
+                  transform: none; }
+
+/* INFOS */
+/* line 374, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.infos {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  height: 100%;
+  background-color: #f2f5f5;
+  overflow-y: visible; }
+  /* line 383, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .infos .btn-search {
+    position: absolute;
+    top: 1.5rem;
+    left: -4rem; }
+    /* line 389, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .infos .btn-search img {
+      display: block;
+      width: 3rem;
+      height: auto;
+      opacity: 0.5; }
+  /* line 400, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .infos .aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible; }
+    /* line 410, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .infos .aside .aside-header {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: relative;
+      height: 20rem;
+      width: 100%;
+      background-size: cover;
+      background-position: top; }
+      /* line 422, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .infos .aside .aside-header .filter {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 205, 199, 0.65); }
+      /* line 432, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .infos .aside .aside-header .btn-play {
+        display: inline-block;
+        position: relative;
+        z-index: 20;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 2px solid #fefefe;
+        border-radius: 1.25rem; }
+        /* line 443, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .infos .aside .aside-header .btn-play:after {
+          display: block;
+          content: '';
+          width: 0;
+          height: 0;
+          border-top: 0.5rem solid transparent;
+          border-bottom: 0.5rem solid transparent;
+          border-left: 0.8rem solid rgba(254, 254, 254, 0.7);
+          position: absolute;
+          top: 0.6rem;
+          left: 0.9rem; }
+      /* line 460, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .infos .aside .aside-header .btn-suggest {
+        display: inline-block;
+        position: relative;
+        z-index: 20;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 2px solid #fefefe;
+        border-radius: 1.25rem;
+        margin-right: 1rem; }
+        /* line 471, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .infos .aside .aside-header .btn-suggest:after {
+          display: block;
+          content: '';
+          height: 70%;
+          width: 70%;
+          position: absolute;
+          top: 15%;
+          left: 15%;
+          background-image: url(interface/assets/medias/images/suggestions.svg);
+          background-size: cover;
+          background-position: center; }
+      /* line 488, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .infos .aside .aside-header h1 {
+        position: relative;
+        z-index: 20;
+        font-family: "Futura STD", "Helvetica Neue", sans serif;
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fefefe;
+        text-shadow: 2px 2px rgba(41, 54, 54, 0.5);
+        width: 80%;
+        margin: 0 auto 2rem auto; }
+      /* line 503, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .infos .aside .aside-header .rates {
+        position: absolute;
+        z-index: 20;
+        left: 0;
+        bottom: 1rem;
+        width: 100%;
+        text-align: center; }
+        /* line 512, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .infos .aside .aside-header .rates li {
+          display: inline-block;
+          position: relative;
+          width: 2rem;
+          height: 2rem; }
+          /* line 519, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+          .infos .aside .aside-header .rates li:after {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center; }
+          /* line 532, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+          .infos .aside .aside-header .rates li.fill:after {
+            background-image: url(interface/assets/medias/images/star_fill.svg); }
+          /* line 538, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+          .infos .aside .aside-header .rates li.empty:after {
+            background-image: url(interface/assets/medias/images/star_empty.svg);
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%; }
+    /* line 554, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+    .infos .aside .aside-content {
+      padding: 4rem 3rem 3rem 3rem;
+      overflow-x: hidden; }
+      /* line 559, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .infos .aside .aside-content section {
+        margin-bottom: 3rem; }
+        /* line 563, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .infos .aside .aside-content section h2 {
+          font-size: 1.2rem;
+          font-family: "Futura STD", "Helvetica Neue", sans serif;
+          text-transform: uppercase;
+          color: #547171;
+          margin-bottom: 1rem; }
+        /* line 573, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .infos .aside .aside-content section p {
+          font-size: 1rem;
+          line-height: 1.2; }
+
+/* ANIMATIONS */
+/* line 600, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .graph-background-1 {
+  -webkit-animation-name: "ShowByEnterWithCircularScaling";
+          animation-name: "ShowByEnterWithCircularScaling";
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s; }
+/* line 600, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .graph-background-2 {
+  -webkit-animation-name: "ShowByEnterWithCircularScaling";
+          animation-name: "ShowByEnterWithCircularScaling";
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s; }
+/* line 600, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .graph-background-3 {
+  -webkit-animation-name: "ShowByEnterWithCircularScaling";
+          animation-name: "ShowByEnterWithCircularScaling";
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s; }
+/* line 600, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .graph-background-4 {
+  -webkit-animation-name: "ShowByEnterWithCircularScaling";
+          animation-name: "ShowByEnterWithCircularScaling";
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s; }
+/* line 600, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .graph-background-5 {
+  -webkit-animation-name: "ShowByEnterWithCircularScaling";
+          animation-name: "ShowByEnterWithCircularScaling";
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s; }
+/* line 615, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos {
+  -webkit-animation-name: 'ShowByEnterFromRight';
+          animation-name: 'ShowByEnterFromRight';
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s; }
+  /* line 623, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .btn-search {
+    -webkit-animation-name: 'ShowBySlidingFromRight';
+            animation-name: 'ShowBySlidingFromRight';
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-delay: 3.9s;
+            animation-delay: 3.9s; }
+/* line 638, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .graph-shows li {
+  -webkit-animation-name: 'ShowByFadeIn';
+          animation-name: 'ShowByFadeIn';
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
+/* line 652, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-header h1, .module-graph.opened .infos .aside-header .buttons a, .module-graph.opened .infos .aside-header .rates li {
+  -webkit-animation-name: "ShowBySlidingFromRight";
+          animation-name: "ShowBySlidingFromRight";
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s; }
+/* line 662, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-header .btn-suggest {
+  -webkit-animation-delay: 4.6s;
+          animation-delay: 4.6s; }
+/* line 664, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-header .btn-play {
+  -webkit-animation-delay: 4.7s;
+          animation-delay: 4.7s; }
+/* line 668, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-header .rates li:nth-child(1) {
+  -webkit-animation-delay: 4.7s;
+          animation-delay: 4.7s; }
+/* line 668, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-header .rates li:nth-child(2) {
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s; }
+/* line 668, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-header .rates li:nth-child(3) {
+  -webkit-animation-delay: 4.9s;
+          animation-delay: 4.9s; }
+/* line 668, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-header .rates li:nth-child(4) {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
+/* line 668, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-header .rates li:nth-child(5) {
+  -webkit-animation-delay: 5.1s;
+          animation-delay: 5.1s; }
+/* line 680, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos .aside-content section {
+  -webkit-animation-name: 'ShowBySlidingFromRight';
+          animation-name: 'ShowBySlidingFromRight';
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(1) {
+    -webkit-animation-delay: 4.9s;
+            animation-delay: 4.9s; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(2) {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(3) {
+    -webkit-animation-delay: 5.1s;
+            animation-delay: 5.1s; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(4) {
+    -webkit-animation-delay: 5.2s;
+            animation-delay: 5.2s; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(5) {
+    -webkit-animation-delay: 5.3s;
+            animation-delay: 5.3s; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(6) {
+    -webkit-animation-delay: 5.4s;
+            animation-delay: 5.4s; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(7) {
+    -webkit-animation-delay: 5.5s;
+            animation-delay: 5.5s; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(8) {
+    -webkit-animation-delay: 5.6s;
+            animation-delay: 5.6s; }
+  /* line 689, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos .aside-content section:nth-child(9) {
+    -webkit-animation-delay: 5.7s;
+            animation-delay: 5.7s; }
+
+/* line 707, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos.remove {
+  -webkit-animation-name: 'HideByLeavingToBottom';
+          animation-name: 'HideByLeavingToBottom';
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+
+/* line 717, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.opened .infos.open {
+  -webkit-animation-name: 'ShowByEnterFromRight';
+          animation-name: 'ShowByEnterFromRight';
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+  /* line 725, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open h1 {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s; }
+  /* line 727, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .buttons .btn-suggest {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; }
+  /* line 729, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .buttons .btn-play {
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s; }
+  /* line 735, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .rates li:nth-child(1) {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s; }
+  /* line 735, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .rates li:nth-child(2) {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s; }
+  /* line 735, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .rates li:nth-child(3) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s; }
+  /* line 735, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .rates li:nth-child(4) {
+    -webkit-animation-delay: 1.1s;
+            animation-delay: 1.1s; }
+  /* line 735, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .rates li:nth-child(5) {
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(1) {
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(2) {
+    -webkit-animation-delay: 1.4s;
+            animation-delay: 1.4s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(3) {
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(4) {
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(5) {
+    -webkit-animation-delay: 1.7s;
+            animation-delay: 1.7s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(6) {
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(7) {
+    -webkit-animation-delay: 1.9s;
+            animation-delay: 1.9s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(8) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s; }
+  /* line 745, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+  .module-graph.opened .infos.open .aside-content section:nth-child(9) {
+    -webkit-animation-delay: 2.1s;
+            animation-delay: 2.1s; }
+
+/* line 755, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+.module-graph.remove {
+  -webkit-animation-name: 'HideByFadeOut';
+          animation-name: 'HideByFadeOut';
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }

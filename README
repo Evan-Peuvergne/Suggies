@@ -1,0 +1,100 @@
+#### TODO ####
+Router
+	-> OOP  (slim, silex)
+
+Sections
+	-> + de sections
+		-> origine
+		-> durée des épisodes
+
+	Dans sections[type][list]-> nombre d'item par objet
+
+### PROCESSES ###
+
+GET SIMILAR
+
+get_similar_shows
+	//cache init 2*
+	//set id
+
+	get_graph_cache_file
+		if ! int -> set_data    //mais toujours int normalement
+
+		if (!cache read) 	//cache read == file exists ?
+			set graphCF     //
+				set_data 	//tmdb_get_data($this->showname);
+				set_meta    //x
+				set_kw		//tmdb_get_keywords($this->showid);
+				set sims 	//tmdb_get_similar($this->showid);
+				set secs    //x
+				secs simY	
+			WRITE
+			/!\send written result
+		READ
+RETURN
+
+get_show setails
+
+	//cache init
+	//$SDid
+	$SD get detaileld cache file
+		get_detailled_cache_file
+
+		if (!int) -> set data //mais tjrs int normalement ?
+
+			if (!cache read) 	//cache read == file exists ?
+				set detailled
+					->this setdata //get data
+			WRITE
+			/!\send written result
+		READ
+
+#### ARCHITECTURE ####
+
+/
+/api
+	/api/cache
+	/api/methods
+	/api/tools
+/interface
+	/interface/assets
+	/interface/js
+
+api/show/popular
+
+/.htaccess
+	redirige vers api/router.php
+
+		router.php
+			décide quelle partie de l'API interne appeler grâce à une regex
+				get_shows 		  // récupère la lsite des séries disponibles
+				get_show_details  //récupère les détails complets d'une série
+				get_similar_shows //récupère les séries similaires à une série
+			
+
+
+	redirige vers interface/index.php avec paramètres
+	redirige vers interface/index.php
+
+----/api 
+	contient le routeur
+				la config
+
+--------/api/tools
+			tools.tmdb.php
+				contient les handler curl
+				le handler cache APC
+
+			tools.crud_shows.php
+				contient la fonction qui lit/ecrit les infos des séries
+				contient la focniton qui retourne les différents types de fichiers
+
+--------/api/methods
+
+--------/api/cache
+			contient les dossiers/ficheirs de cache
+			contient la classe cache et le handler
+
+
+
+	/

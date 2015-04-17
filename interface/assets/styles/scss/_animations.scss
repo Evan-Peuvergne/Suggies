@@ -1,0 +1,219 @@
+
+
+	/* HIDE */
+
+
+	// FADEOUT
+
+	@keyframes HideByFadeOut {
+
+		0%{
+
+			opacity:1;
+
+		}
+
+		100%{
+
+			display: none;
+			opacity:0;
+
+		}
+
+	}
+
+
+	// LEAVE TO TOP
+
+	@keyframes HideByLeavingToTop {
+
+		0%{
+
+			opacity:1;
+			transform:none;
+
+		}
+
+		100%{
+
+			opacity:0;
+			transform:translateY(-60%);
+
+		}
+
+	}
+
+
+	// LEAVE TO BOTTOM
+
+	@keyframes HideByLeavingToBottom {
+
+		0%{
+
+			opacity:1;
+			transform:none;
+
+		}
+
+		100%{
+
+			opacity:0;
+			transform:translateX(100%);
+
+		}
+
+	}
+
+
+
+
+	/* SHOW */
+
+
+	// FADE IN
+
+	@keyframes ShowByFadeIn {
+
+		0%{
+
+			opacity:0;
+
+		}
+
+		100%{
+
+			opacity:1;
+
+		}
+
+	}
+
+
+	// ENTER FROM BOTTOM
+
+	@keyframes ShowByEnterFromBottom {
+
+		0%{
+
+			opacity:0;
+			transform:translateY(50%);
+
+		}
+
+		100%{
+
+			opacity:1;
+			transform:none;
+
+		}
+
+	}
+
+
+	// ENTER FROM RIGHT
+
+	@keyframes ShowByEnterFromRight {
+
+		0%{
+
+			transform:translateX(120%);
+
+		}
+
+		100%{
+
+			transform:none;
+
+		}
+
+	}
+
+
+	// ENTER SLIDE RIGHT
+
+	@keyframes ShowBySlidingFromRight {
+
+		0%{
+
+			opacity:0;
+			transform:translateX(50px);
+
+		}
+
+		100%{
+
+        	opacity:1;
+        	transform:none;
+
+		}
+
+	}
+
+
+	// ENTER BY CIRCULAR SCALING
+
+	@keyframes ShowByEnterWithCircularScaling {
+
+		0%{
+			
+			display: block;
+			opacity:0;
+			transform:scale(0.7);
+
+		}
+
+		100%{
+
+			display: block;
+			opacity:1;
+			transform:none;
+
+		}
+
+	}
+
+
+	// SLIDING FROM LEFT
+
+	@keyframes ShowBySlidingFromLeft {
+
+		0%{
+
+			display: block;
+			opacity:0;
+			margin-left:-2rem;
+
+		}
+
+		100%{
+
+			display: block;
+			opacity:1;
+			margin-left:0;
+
+		}
+
+	}
+
+
+	// ENTER BY ROLLING
+
+	@keyframes ShowByRolling {
+
+		0%{
+			
+			display: block;
+			opacity:0;
+			transform:rotate(-60deg);
+
+		}
+
+		100%{
+
+			display: block;
+			opacity:1;
+			transform:none;
+
+		}
+
+	}
