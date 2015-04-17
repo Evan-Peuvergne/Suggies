@@ -8,10 +8,28 @@
 
 		display: flex;
 
+		.btn-search{
+
+			position:absolute;
+			z-index:50;
+			top:2rem;
+			left:2rem;
+			width:3rem;
+
+			img{
+
+				display: block;
+				width:100%;
+				height:auto;
+
+			}
+
+		}
+
 	}
 
 
-
+	
 
 
 	/* GRAPH */
@@ -22,7 +40,7 @@
 		position:relative;
 		height:calc(100% - 10rem);
 		margin:4rem 10rem 4rem 6rem;
-
+		
 		
 		// Errors
 
@@ -418,8 +436,9 @@
 		.btn-search{
 
 			position:absolute;
+			z-index:1000;
 			top:1.5rem;
-			left: -4rem;
+			right: 1.5rem;
 
 			img{
 	

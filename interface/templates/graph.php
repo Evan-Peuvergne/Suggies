@@ -1,5 +1,7 @@
 <div class="module module-graph">
-		
+
+	<a href="#" class="btn-search"><img src="interface/assets/medias/images/search.svg" alt=""></a>	
+
 	<article class="graph">
 
 		<p class="errors"></p>
@@ -21,7 +23,7 @@
 	</article>
 
 	<aside class="infos">
-		<a href="#" class="btn-search"><img src="interface/assets/medias/images/search.svg" alt=""></a>
+		<!-- <a href="#" class="btn-search"><img src="interface/assets/medias/images/search.svg" alt=""></a> -->
 	</aside>
 
 </div>
