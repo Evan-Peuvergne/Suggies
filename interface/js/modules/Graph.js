@@ -137,6 +137,13 @@
 			// Start loading
 			module.dom.graph.addClass('loading');
 
+			// Change url
+			console.log(module);
+			window.history.pushState({
+				page: 'graph',
+				id: module.id
+			}, module.show.name, module.show.name.replace(/\s+/g, ''));
+
 			// Graph
 			onGraphLoaded(module);
 

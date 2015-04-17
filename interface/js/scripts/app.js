@@ -25,6 +25,7 @@ var filters = {
 	'duration': 'Durée'
 };
 
+var historyManager;
 
 
 $(document).ready(function ()
