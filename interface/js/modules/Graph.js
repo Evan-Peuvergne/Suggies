@@ -142,7 +142,7 @@
 			window.history.pushState({
 				page: 'graph',
 				id: module.id
-			}, module.show.name, module.show.name.replace(/\s+/g, ''));
+			}, module.show.name, module.show.name.replace(/\s+/g, '').replace(/\W/g, ''));
 
 			// Graph
 			onGraphLoaded(module);
