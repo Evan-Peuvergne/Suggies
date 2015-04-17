@@ -22,17 +22,13 @@ var metrics = {
 var filters = {
 	'genre': 'Genre',
 	'origin': 'Pays',
-	'eps_length': 'Durée'
+	'duration': 'Durée'
 };
 
 
 
 $(document).ready(function ()
 {
-
-	// $.ajaxSetup({
- //    	cache: false
-	// });
 
 	// Init dom references
 	dom.body = $('body');

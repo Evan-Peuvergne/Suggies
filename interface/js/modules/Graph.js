@@ -156,7 +156,8 @@
 			// Success
 			request.done(function (data)
 			{
-				if(data.response.length > 0 && data.response.similar.length > 0)
+				console.log(data.response.similar);
+				if(data.response.similar.shows.length > 0)
 				{
 					// Add suggestions
 					addSuggestions(module, data.response.similar, onSuggestionsLoaded);
@@ -165,8 +166,11 @@
 			});
 
 			// Fail
-			request.fail(function (data)
+			request.fail(function (data, jq, xhr)
 			{
+				console.log(data);
+				console.log(jq);
+				console.log(xhr);
 				module.handle();
 			});
 		}
