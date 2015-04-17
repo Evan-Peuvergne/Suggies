@@ -151,8 +151,11 @@
 			// Success
 			request.done(function (data)
 			{
-				module.posters = new Array();
-				createPosterForResult(module, data.response, 0);
+				if(data.response.length > 0)
+				{
+					module.posters = new Array();
+					createPosterForResult(module, data.response, 0);
+				}
 			});
 		}
 

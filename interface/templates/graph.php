@@ -1,6 +1,8 @@
 <div class="module module-graph">
 		
 	<article class="graph">
+
+		<p class="errors"></p>
 				
 		<div class="graph-background">
 			<div class="graph-background-1"></div>

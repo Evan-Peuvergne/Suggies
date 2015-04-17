@@ -25,6 +25,7 @@
 		this.dom = {
 			elem: null,
 			graph: null,
+			errors: null,
 			shows: null,
 			labels: null,
 			filters: null,
@@ -91,6 +92,7 @@
 				// Update dom variables
 				that.dom.elem = $(data);
 				that.dom.graph = that.dom.elem.find('.graph');
+				that.dom.errors = that.dom.graph.find('.errors');
 				that.dom.show = that.dom.elem.find('.graph-background-1');
 				that.dom.shows = that.dom.graph.find('.graph-shows');
 				that.dom.labels = that.dom.graph.find('.graph-labels');
@@ -140,12 +142,14 @@
 			// Load suggestions
 			var request = $.ajax({
 				type: 'GET',
-				url: 'api/shows/' + module.id + '/similar'
+				url: 'api/shows/' + module.id + '/similar',
+				dataType: 'json'
 			});
 
 			// Success
 			request.done(function (data)
 			{
+				console.log(data);
 				// Add suggestions
 				addSuggestions(module, data.response.similar, onSuggestionsLoaded);
 			});
@@ -224,6 +228,34 @@
 			// Loading ended
 			module.dom.graph.addClass('loading-ended').removeClass('loading');
 		}
+
+
+
+
+
+
+		/* HANDLE ERROR */
+
+		this.handle = function (message, link)
+		{
+			// Display message
+			if(!link){ that.dom.errors.html(message); }
+			else{ 
+				var error = $('<a href="#">' + message + link.name + '</a>');
+				error.find('a').click(function (e)
+				{
+					e.preventDefault();
+					link.callback();
+				});
+				that.dom.errors.append(error);
+			}
+
+			// Show
+			that.dom.errors.addClass('active');
+		}
+
+
+
 
 
 
