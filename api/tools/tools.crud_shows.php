@@ -2,23 +2,9 @@
 
 require_once DIR_API.'/tools/tools.tmdb.php';
 
-$time = microtime(TRUE);
 
 /*
- * construit le fichier cache d'une série
- *
- * get id from show title
- * get details from show
- * get similar ponderate
- * encode
- * save
- * 
- * repeat
- * 
 
- */
-/**
- * 					TODO
  */
 class CacheShow {
 	public $showname;
@@ -110,8 +96,6 @@ class CacheShow {
 	//need $this->data
 	public function set_similars(){
 		$similars = tmdb_get_similar($this->showid);
-		//print "id : ". $this->showid." similars : ";
-		//print json_encode($similars).PHP_EOL;
 		$this->similar = Array();
 		$this->similar["shows"] = Array();
 		foreach($similars as $similar) {
@@ -190,7 +174,6 @@ class CacheShow {
 			$this->set_data();
 		}
 		if ( !$Cache->read(strval($this->showid)) ) {
-			//echo "no cache";
 			$this->set_graph_cache_file();
 			$Cache->write(strval($this->showid), json_encode($this->cache_file));
 		}
@@ -203,12 +186,10 @@ class CacheShow {
 			$this->set_data();
 		}
 		if ( !$Cache->read(strval($this->showid)) ) {
-			//echo "no cache";
 			$this->set_detailled_cache_file();
 			$Cache->write(strval($this->showid), json_encode($this->data));
 		}
 		$this->cache_file = json_decode($Cache->read(strval($this->showid)));
-		//print $Cache->read(strval($this->showid)).PHP_EOL;
 		return $this->cache_file;
 	}
 
@@ -248,8 +229,6 @@ function get_eps_length($show_id){
 	$Cache = new Cache(ROOT.'/cache/details', 60*24*7); //1 week long
 	$ShowDetails->showid = $show_id;
 	$ShowDetails->get_detailled_cache_file($Cache);
-	//var_dump($ShowLength = $ShowDetails->cache_file->episode_run_time);
-	//die();
 	if (!isset($ShowDetails->cache_file->episode_run_time[0])){
 		$ShowDetails->cache_file->episode_run_time[0] = 30;
 	}

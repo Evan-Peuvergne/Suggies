@@ -52,11 +52,9 @@ function curl_tmdb($url){
 			
 	if($resp === false)								//error handling is important
 	{
-	    echo 'error:' . curl_error($curl);
 	    exit();
 	}
 	else if ( isset(json_decode($resp)->status_code) && json_decode($resp)->status_code!= 1 ) {
-		echo 'error:' . json_decode($resp)->status_message;
 		return false;
 	}
 	else {
@@ -83,7 +81,6 @@ function tmdb_get_show($show){
 		$res = $res->results[0];
 		return $res;		
 	}
-	trigger_error("pas de résultat pour ".$show, E_USER_NOTICE);
 }
 
 /**
@@ -135,7 +132,7 @@ function tmdb_get_keywords($id){
 	}
 	
 	if (count($res) < 1){
-		trigger_error("pas de keywords pour ".$id, E_USER_NOTICE);
+
 	}
 
 	return $res;
@@ -183,7 +180,6 @@ function tmdb_get_similar($id){
 	$res = json_decode($res);
 
 	if (count($res->results)<1){
-		trigger_error("pas de similaires pour ".$id, E_USER_NOTICE);
 	}
 	return $res->results;
 }
@@ -209,6 +205,78 @@ function tmdb_get_external_ids($id){
 function tmdb_get_by_genre($genre){
 	$url = "http://api.themoviedb.org/3/discover/movie?&with_genres".$genre;
 	$res = curl_tmdb($url);
+
+	return json_decode($res);
+}
+
+function tmdb_get_actors ($tv_id){
+
+	$url = "http://api.themoviedb.org/3/tv/".$tv_id."/credits?";
+	$res = curl_tmdb($url);
+
+	return json_decode($res);
+}
+
+function tmdb_get_videos ($tv_id){
+
+	$url = "http://api.themoviedb.org/3/tv/".$tv_id."/videos?api_key=4163044cd4323f71ac228a10c1a487d6";
+	$res = curl_tmdb($url);
+
+	return json_decode($res);
+
+}
+
+function tmdb_get_popular_series (){
+
+	$url = "http://api.themoviedb.org/3/tv/popular?api_key=4163044cd4323f71ac228a10c1a487d6";
+	$res = curl_tmdb($url);
+        
+	return json_decode($res);
+
+}
+
+
+function tmdb_get_worst_series (){
+
+	$url = "http://api.themoviedb.org/3/tv/top_rated?api_key=4163044cd4323f71ac228a10c1a487d6";
+	$res = curl_tmdb($url);
+
+	return json_decode($res);
+}
+
+
+function tmdb_get_search_tv($search){
+
+
+	$url = "http://api.themoviedb.org/3/search/tv?query=".$search;
+	$result = json_decode(curl_tmdb($url))->results;
+
+	// Manage response
+	return array_splice($result, 0, 10);
+
+}
+
+function tmdb_user_get_info ($user_si) {
+
+	$url="http://api.themoviedb.org/3/account?api_key=4163044cd4323f71ac228a10c1a487d6&session_id=".$user_si;
+	$res = curl_tmdb($url);
+
+	return json_decode($res);			
+
+}
+
+function tmdb_get_new_token () {
+
+	$url="http://api.themoviedb.org/3/authentication/token/new?";
+	$res=curl_tmdb($url);
+
+	return json_decode($res);
+}
+
+function tmdb_get_session_id ($approved_token) {
+
+	$url="http://api.themoviedb.org/3/authentication/session/new?request_token=".$approved_token;
+	$res=curl_tmdb($url);
 
 	return json_decode($res);
 }

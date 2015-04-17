@@ -4,19 +4,18 @@
 	require 'render.php';
 
 	$routes = Array(
-		'/shows\/\d+$/'	 		    => 'get_show_details',
-		'/shows\/\d+\/similar\/?$/' => 'get_similar_shows',
-		'/popular\/?$/'         	=> 'get_popular_series',
-		'/worst\/?$/'				=> 'get_worst_series',
-		'/search\/?$/'				=> 'get_search_tv',
-		'/newtoken\/?$/'			=> 'get_new_token',
-		'/sessionid\/?$/'			=> 'get_session_id',
-		'/userinfo\/?$/'			=> 'get_user_info',
-		'/videos\/?$/'				=> 'get_videos',
-		'/session\/?$/'				=> 'get_session',
-		'/actors\/?$/'				=> 'get_actors',
-		'/watchlist\/?$/'			=> 'post_watch_list'		
-
+		'/shows\/\d+$/'	 		    => 'show_get_details',
+		'/shows\/\d+\/similar\/?$/' => 'show_get_similar',
+		'/shows\/\d+\/actors\/?$/'	=> 'show_get_actors',
+		'/shows\/\d+\/videos\/?$/'	=> 'show_get_videos',
+		'/shows\/popular\/?$/'      => 'shows_get_popular',
+		'/shows\/worst\/?$/'		=> 'shows_get_worst',
+		'/search\/?(.*)$/'			=> 'shows_search',
+		'/user\/newtoken\/?$/'		=> 'user_get_new_token',
+		'/user\/sessionid\/?$/'		=> 'user_get_session_id',
+		'/user\/userinfo\/?$/'		=> 'user_get_info',
+		'/user\/session\/?$/'		=> 'user_get_session',
+		'/user\/watchlist\/?$/'		=> 'post_watch_list'		
 	);
 
 
@@ -26,7 +25,6 @@
 	//extract correct part
 	preg_match("/api\/(.*)/", $uri, $matches);
 	$uri = $matches[1];
-
 	
 	//detect route
 	foreach ($routes as $key => $value){
@@ -38,9 +36,16 @@
 			//echo "<br>preg match uri : ".$uri."<br><br>";
 			include "methods/".$value.".php";
 			preg_match("/\d+/", $uri, $id);
+			preg_match("/search\/?(.*)$/", $uri, $search);
 					
 			if ( count($id) > 0 ){
+				echo '<pre>';
+				print_r($id);
+				echo '</pre>';
+						
 				render(200, call_user_func($value, intval($id[0])));				
+			} else if (count ($search) > 0){
+				render(200, call_user_func($value, $search[1]));
 			} else {
 				render(200, call_user_func($value));				
 			}

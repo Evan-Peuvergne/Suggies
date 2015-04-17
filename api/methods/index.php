@@ -6,10 +6,6 @@ header('Content-Type: text/html');
 
 $token = get_new_token();
 
-// echo '<pre>';
-// print_r($token);
-// echo '</pre>';
-
 $url = "https://www.themoviedb.org/authenticate/".$token->request_token."?redirect_to=http://test.lorem.ovh";
 
 if (!empty($_GET['request_token']) && ($_GET['approved'] == true))
