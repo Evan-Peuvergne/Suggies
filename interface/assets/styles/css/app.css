@@ -793,6 +793,9 @@ h1, h2, h3, h4, h5, h6, .title {
       /* line 98, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
       .graph .graph-background .graph-background-1.graph-filter-6 {
         border-color: #e67e22; }
+      /* line 98, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-background .graph-background-1.graph-filter-7 {
+        border-color: #1abc9c; }
   /* line 117, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
   .graph .graph-background-1:after {
     display: -webkit-flex;
@@ -918,6 +921,24 @@ h1, h2, h3, h4, h5, h6, .title {
         /* line 222, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
         .graph .graph-shows li.show-filter-6 span {
           color: rgba(230, 126, 34, 0.8); }
+      /* line 212, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.show-filter-7 {
+        background-color: rgba(26, 188, 156, 0.5); }
+        /* line 216, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-7:after {
+          background-color: rgba(26, 188, 156, 0.4); }
+        /* line 222, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-7 span {
+          color: rgba(26, 188, 156, 0.8); }
+      /* line 212, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-shows li.show-filter-8 {
+        background-color: rgba(46, 204, 113, 0.5); }
+        /* line 216, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-8:after {
+          background-color: rgba(46, 204, 113, 0.4); }
+        /* line 222, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+        .graph .graph-shows li.show-filter-8 span {
+          color: rgba(46, 204, 113, 0.8); }
       /* line 232, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
       .graph .graph-shows li:hover span {
         display: block;
@@ -995,6 +1016,16 @@ h1, h2, h3, h4, h5, h6, .title {
         color: #e67e22;
         -webkit-animation-delay: 0.3s;
                 animation-delay: 0.3s; }
+      /* line 298, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.filter-label-7 {
+        color: #1abc9c;
+        -webkit-animation-delay: 0.35s;
+                animation-delay: 0.35s; }
+      /* line 298, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
+      .graph .graph-labels li.filter-label-8 {
+        color: #2ecc71;
+        -webkit-animation-delay: 0.4s;
+                animation-delay: 0.4s; }
       /* line 307, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/graph */
       .graph .graph-labels li.hide {
         -webkit-animation-name: 'HideByFadeOut';

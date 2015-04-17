@@ -207,7 +207,7 @@
 
 				// Filters
 
-				@for $i from 1 to length($filters){
+				@for $i from 1 to length($filters) + 1{
 
 					&.show-filter-#{$i}{
 
@@ -293,7 +293,7 @@
 				}
 
 
-				@for $i from 1 to length($filters){
+				@for $i from 1 to length($filters) + 1{
 
 					&.filter-label-#{$i}{
 
