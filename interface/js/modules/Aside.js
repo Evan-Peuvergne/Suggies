@@ -28,6 +28,7 @@
 			buttons: {
 				suggest: null,
 				play: null,
+				watchlist: null
 			},
 			rates: null,
 			content: null
@@ -69,6 +70,7 @@
 				that.dom.header = that.dom.elem.find('.aside-header');
 				that.dom.buttons.suggest = that.dom.header.find('.btn-suggest');
 				that.dom.buttons.play = that.dom.header.find('a.btn-play');
+				that.dom.buttons.watchlist = that.dom.elem.find('.btn-watchlist');
 				that.dom.rates = that.dom.header.find('ul.rates');
 				that.dom.content = that.dom.elem.find('.aside-content');
 
@@ -101,9 +103,39 @@
 				console.log('play');
 			});
 
+			// Watchlist
+			that.dom.buttons.watchlist.click(function (e)
+			{
+				e.preventDefault();
+				that.watchlist();
+			})
+
 			// Callback
 			callback(module.dom.elem);
 		} 
+
+
+
+
+
+
+
+		/* WATCHLIST */
+
+
+		this.watchlist = function ()
+		{
+			var request = $.ajax({
+				type: 'GET',
+				url: 'api/user/newtoken'
+			});
+
+			request.done(function (data)
+			{
+				var token = data.response.request_token;
+				window.location = 'https://www.themoviedb.org/authenticate/' + token + '?redirect_to=http://localhost:8000/Projets/Suggies/TheBigBangTheory';
+			});
+		}
 
 
 

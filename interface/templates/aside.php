@@ -17,5 +17,8 @@
 			<h2>Synopsis</h2>
 			<p>{{overview}}</p>
 		</section>
+		<a href="#" class="btn btn-watchlist">
+			<span>Watchlist</span>
+		</a>
 	</div>
 </div>

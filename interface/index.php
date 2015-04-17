@@ -1,3 +1,12 @@
+<?php
+
+	echo '<pre>';
+	print_r($_GET);
+	echo '</pre>';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

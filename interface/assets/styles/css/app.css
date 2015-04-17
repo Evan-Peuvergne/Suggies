@@ -446,6 +446,38 @@ h1, h2, h3, h4, h5, h6, .title {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
 
+/* BOOTSTRAP */
+/* line 119, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+.btn {
+  display: inline-block;
+  position: relative;
+  z-index: 20000;
+  font-family: "Futura STD", "Helvetica Neue", sans serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fefefe;
+  background-color: #80cdc7;
+  text-decoration: none;
+  height: 3rem;
+  padding: 0.7rem 2rem;
+  border-radius: 0.4rem; }
+  /* line 134, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+  .btn:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -0.4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+    background-color: #b7e3df;
+    z-index: -1;
+    transition: background-color 0.3s ease; }
+  /* line 150, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/app.scss */
+  .btn:hover:after {
+    background-color: #9dd9d4; }
+
 /* SEARCH */
 /* SEARCH */
 /* line 6, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */

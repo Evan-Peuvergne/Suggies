@@ -25,8 +25,6 @@ var filters = {
 	'duration': 'Durée'
 };
 
-var historyManager;
-
 
 $(document).ready(function ()
 {
@@ -36,6 +34,7 @@ $(document).ready(function ()
 	dom.loader = $('.main-loader');
 
 	// Launch research
+	console.log(window.location);
 	if(!window.history.state)
 	{
 		modules.search = new Search();
