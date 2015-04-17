@@ -36,13 +36,27 @@ $(document).ready(function ()
 	dom.loader = $('.main-loader');
 
 	// Launch research
-	modules.search = new Search();
-	modules.search.init(function (search)
+	if(!window.history.state)
 	{
-		modules.search = search;
-		dom.loader.addClass('hidden');
-		modules.search.show();
-	});
-
+		modules.search = new Search();
+		modules.search.init(function (search)
+		{
+			modules.search = search;
+			dom.loader.addClass('hidden');
+			modules.search.show();
+		});
+	}else{
+		modules.search = new Search();
+		modules.search.init(function (search)
+		{
+			modules.search = search;
+		});
+		modules.graph = new Graph(window.history.state.id);
+		modules.graph.init(function (graph)
+		{
+			dom.loader.addClass('hidden');
+			graph.open();
+		});
+	}
 
 });
