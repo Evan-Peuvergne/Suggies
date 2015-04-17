@@ -34,8 +34,7 @@ $(document).ready(function ()
 	dom.loader = $('.main-loader');
 
 	// Launch research
-	console.log(window.location);
-	if(!window.history.state || window.location)
+	if(!window.history.state)
 	{
 		modules.search = new Search();
 		modules.search.init(function (search)
