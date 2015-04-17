@@ -162,18 +162,22 @@
 				var sessionId = data.session_id;
 
 				var request = $.ajax({
-					type: 'POST',
-					url: 'http://api.themoviedb.org/3/account/' + sessionId + '/watchlist?api_key=4163044cd4323f71ac228a10c1a487d6',
-					data: {
-						media_type: 'tv',
-						media_id: that.data.id,
-						watchlist: true
-					}
+					type: 'GET',
+					url: 'http://api.themoviedb.org/3/account?api_key=4163044cd4323f71ac228a10c1a487d6&session_id='+sessionId
 				});
 
 				request.done(function (data)
 				{
-					console.log(data);
+					var user_id = data.id;
+					var request = $.ajax({
+						type: 'POST',
+						url: 'http://api.themoviedb.org/3/account/' + user_id + '/watchlist?api_key=4163044cd4323f71ac228a10c1a487d6&session_id='+sessionId,
+						data: {
+							media_type: 'tv',
+							media_id: that.data.id,
+							watchlist: true
+						}
+					});				
 				})
 
 			});
