@@ -24,6 +24,7 @@
 		<form>
 			<input class="loading" type="text" placeholder="Votre série">
 			<div class="loader"></div>
+			<p class="errors">Vous avez fait n'importe quoi salaud</p>
 		</form>
 		
 		<ul>

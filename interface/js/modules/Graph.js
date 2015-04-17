@@ -25,6 +25,7 @@
 		this.dom = {
 			elem: null,
 			graph: null,
+			errors: null,
 			shows: null,
 			labels: null,
 			filters: null,
@@ -91,12 +92,20 @@
 				// Update dom variables
 				that.dom.elem = $(data);
 				that.dom.graph = that.dom.elem.find('.graph');
+				that.dom.errors = that.dom.graph.find('.errors');
 				that.dom.show = that.dom.elem.find('.graph-background-1');
 				that.dom.shows = that.dom.graph.find('.graph-shows');
 				that.dom.labels = that.dom.graph.find('.graph-labels');
 				that.dom.filters = that.dom.graph.find('.graph-filters');
 				that.dom.aside = that.dom.elem.find('.infos');
 				that.dom.search = that.dom.elem.find('.btn-search');
+
+				// Manage error click
+				that.dom.errors.click(function (e)
+				{
+					// Simulate click on search icon
+					that.dom.search.click();
+				})
 
 				// Update current show
 				that.dom.show.css('background', 'url(http://image.tmdb.org/t/p/w500' + that.show.poster_path + ')');
@@ -140,14 +149,25 @@
 			// Load suggestions
 			var request = $.ajax({
 				type: 'GET',
-				url: 'api/shows/' + module.id + '/similar'
+				url: 'api/shows/' + module.id + '/similar',
+				dataType: 'json'
 			});
 
 			// Success
 			request.done(function (data)
 			{
-				// Add suggestions
-				addSuggestions(module, data.response.similar, onSuggestionsLoaded);
+				if(data.response.length > 0 && data.response.similar.length > 0)
+				{
+					// Add suggestions
+					addSuggestions(module, data.response.similar, onSuggestionsLoaded);
+				}
+				else{ module.handle("Malheureusement, nous n'avons pu trouver aucune suggestions pour cette série"); }
+			});
+
+			// Fail
+			request.fail(function (data)
+			{
+				module.handle();
 			});
 		}
 
@@ -224,6 +244,26 @@
 			// Loading ended
 			module.dom.graph.addClass('loading-ended').removeClass('loading');
 		}
+
+
+
+
+
+
+		/* HANDLE ERROR */
+
+		this.handle = function (message)
+		{
+			// Display message
+			if(!message){ message = 'Nous sommes désolé, mais un problème technique est survenu'; }
+			that.dom.errors.html(message);
+
+			// Show
+			that.dom.errors.addClass('active');
+		}
+
+
+
 
 
 
