@@ -15,7 +15,7 @@
 		'/user\/sessionid\/?$/'		=> 'user_get_session_id',
 		'/user\/userinfo\/?$/'		=> 'user_get_info',
 		'/user\/session\/?$/'		=> 'user_get_session',
-		'/user\/watchlist\/?$/'		=> 'post_watch_list'		
+		'/user\/watchlist\/?$/'		=> 'post_watch_list',		
 	);
 
 

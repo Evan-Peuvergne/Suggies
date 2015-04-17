@@ -75,6 +75,26 @@
 				that.dom.content = that.dom.elem.find('.aside-content');
 
 				// Attache events
+				getVideo(that, callback);
+			});
+		}
+
+		function getVideo(module, callback)
+		{
+			// Request
+			var request = $.ajax({
+				type: 'GET',
+				url: 'api/shows/' + module.data.id + '/videos'
+			});
+
+			// Success
+			request.done(function (data)
+			{
+				// Update link
+				that.dom.buttons.play.attr('href', 'https://www.youtube.com/embed/' + data.response.results[0].key);
+				that.dom.buttons.play.attr('target', '_blank');
+
+				// Attache events
 				attachEvents(that, callback);
 			});
 		}
@@ -94,13 +114,6 @@
 						modules.graph.open(true, false);
 					});
 				});
-			});
-
-			// Play
-			that.dom.buttons.play.click(function (e)
-			{
-				e.preventDefault();
-				console.log('play');
 			});
 
 			// Watchlist
@@ -133,7 +146,7 @@
 			request.done(function (data)
 			{
 				var token = data.response.request_token;
-				window.location = 'https://www.themoviedb.org/authenticate/' + token + '?redirect_to=http://localhost:8000/Projets/Suggies/TheBigBangTheory';
+				window.location = 'https://www.themoviedb.org/authenticate/' + token + '?redirect_to='+window.location;
 			});
 		}
 

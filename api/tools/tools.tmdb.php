@@ -42,7 +42,7 @@ function curl_tmdb($url){
 	$curl = curl_init();
 	$url = $url."&api_key=4163044cd4323f71ac228a10c1a487d6";
 	curl_setopt_array($curl, array(
-		CURLOPT_RETURNTRANSFER => 1,
+		CURLOPT_RETURNTRANSFER => true,
 		CURLOPT_URL => $url,
 		CURLOPT_USERAGENT => "Yo I'm SUGGIES"
 		)

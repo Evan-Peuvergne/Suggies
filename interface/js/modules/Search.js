@@ -139,10 +139,7 @@
 			// Prepare request
 			var request = $.ajax({
 				type: 'POST',
-				url: 'api/search',
-				data: {
-					string: search
-				}
+				url: 'api/search/' + search
 			});
 
 			// Success
