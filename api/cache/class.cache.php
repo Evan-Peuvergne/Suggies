@@ -42,7 +42,6 @@ class Cache {
 	public function inc($file){			// save content of a script in a file
 		$filename = basename($file);
 		if ($content = $this->read(filename)){
-			echo $content;
 			return false;
 		}
 		ob_start();

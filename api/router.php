@@ -29,20 +29,12 @@
 	//detect route
 	foreach ($routes as $key => $value){
 
-		// echo "<br> key : ".$key;
-		// echo "<br> value : ".$value;
-
 		if ( preg_match($key, $uri) ){
-			//echo "<br>preg match uri : ".$uri."<br><br>";
 			include "methods/".$value.".php";
 			preg_match("/\d+/", $uri, $id);
 			preg_match("/search\/?(.*)$/", $uri, $search);
 					
 			if ( count($id) > 0 ){
-				echo '<pre>';
-				print_r($id);
-				echo '</pre>';
-						
 				render(200, call_user_func($value, intval($id[0])));				
 			} else if (count ($search) > 0){
 				render(200, call_user_func($value, $search[1]));

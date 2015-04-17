@@ -1,4 +1,12 @@
 <?php
+
+/*
+	DOCUMENT DE TEST DE PERFORMANCES
+
+ */
+
+
+
 $time = microtime(TRUE);
 
 require "class.cache.php";
@@ -22,9 +30,6 @@ $Cache = new Cache(ROOT.'/cache/tmp', 60);
 	if (!$Cache->read('1668')){
 		$Cache->write('1668', 'ma super 1668');
 	}
-	echo '<pre>';
-	print_r(json_decode($Cache->read("1668")));
-	echo '</pre>';
 ?>
 
 	<p>temps de chargement : <?= round(microtime(TRUE) - $time,3);  ?> secondes  </p>

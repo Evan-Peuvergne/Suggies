@@ -82,7 +82,6 @@ class CacheShow {
 			} else {
 				$length = "long";
 			}
-			print($show['duration']);
 			$this->similar['shows'][$index]['duration'] = $length;
 			if (!array_key_exists($length, $this->similar["sections"]["duration"])){
 				$this->similar["sections"]["duration"][$length] = 0;
