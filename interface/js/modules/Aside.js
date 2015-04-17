@@ -91,8 +91,11 @@
 			request.done(function (data)
 			{
 				// Update link
-				that.dom.buttons.play.attr('href', 'https://www.youtube.com/embed/' + data.response.results[0].key);
-				that.dom.buttons.play.attr('target', '_blank');
+				if(data.response.results[0])
+				{
+					that.dom.buttons.play.attr('href', 'https://www.youtube.com/embed/' + data.response.results[0].key);
+					that.dom.buttons.play.attr('target', '_blank');
+				}
 
 				// Attache events
 				attachEvents(that, callback);
