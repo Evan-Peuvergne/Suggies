@@ -413,7 +413,7 @@
 		height:100%;
 		// background-color:red;
 		background-color:darken($background, 3%);
-		overflow-y: visible;
+		overflow: scroll;
 
 		.btn-search{
 
@@ -439,8 +439,6 @@
 			left:0;
 			width:100%;
 			height:100%;
-			overflow-y:scroll;
-			overflow-x:visible;
 
 			.aside-header{
 				
