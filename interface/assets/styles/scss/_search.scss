@@ -21,10 +21,9 @@
 				width:100%;
 				height:5rem;
 				font-size:2rem;
-				margin-bottom:3rem;
+				margin-bottom:5rem;
 				border-bottom:1px solid darken($background, 30%);
 				background-color:$background;
-				overflow:hidden;
 
 				input{
 
@@ -54,6 +53,36 @@
 					&:-ms-input-placeholder {  
 					   position:relative;
 					   top:0.4rem; 
+					}
+
+				}
+
+				p.errors{
+					
+					display: none;
+					font-size:0.8rem;
+					position:absolute;
+					bottom:-2rem;
+					left:0;
+					color:$error;
+
+					&.active{
+						
+						display: block;
+						animation-name:'ShowByFadeIn';
+						animation-duration:0.8s;
+						animation-timing-function:ease;
+						animation-fill-mode:both;
+
+					}
+
+					&.hidden{
+
+						animation-name:'HideByFadeOut';
+						animation-duration:0.8s;
+						animation-timing-function:ease;
+						animation-fill-mode:both;
+
 					}
 
 				}

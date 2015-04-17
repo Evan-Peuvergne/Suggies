@@ -25,6 +25,7 @@
 		this.dom = {
 			elem: null,
 			input: null,
+			errors: null,
 			posters: null,
 			loader: null
 		};
@@ -68,6 +69,7 @@
 			// Update properties
 			module.dom.elem = $(data);
 			module.dom.input = module.dom.elem.find('input');
+			module.dom.errors = module.dom.elem.find('.errors');
 			module.dom.posters = module.dom.elem.find('ul');
 			module.dom.loader = module.dom.elem.find('.loader');
 
@@ -113,7 +115,7 @@
 		this.search = function (search)
 		{
 			// Manage errors
-			if(search == ""){ handleErrors("Votre recherche est vide"); }
+			if(search == ""){ this.handle('Votre recherche est vide.'); }
 
 			// Make the research
 			else
@@ -122,11 +124,6 @@
 				requestSearch(this, search);
 			}
 
-		}
-
-		function handleErrors (error)
-		{
-			console.log(error);
 		}
 
 		function requestSearch (module, search)
@@ -155,7 +152,15 @@
 				{
 					module.posters = new Array();
 					createPosterForResult(module, data.response, 0);
+				}else{
+					that.handle("Aucun résultat correspondant à votre recherche.");
 				}
+			});
+
+			// Fail
+			request.fail(function (data)
+			{
+				that.handle();
 			});
 		}
 
@@ -245,7 +250,6 @@
 
 
 
-
 		/* REINIT */
 
 		this.reinit = function ()
@@ -255,6 +259,39 @@
 			this.dom.posters.find('li.loading').removeClass('loading');
 		}
 
+
+
+
+
+
+		/* HANDLE ERRORS */
+
+		this.handle = function (message)
+		{
+			// Default value
+			if(!message){ message = 'Nous sommes désolé, mais un problème technique est survenu'; }
+			
+			// Print error
+			this.dom.errors.html(message);
+			this.dom.errors.removeClass('hidden').addClass('active');
+
+			// Event attachement for removing error
+			var i=0;
+			that.dom.input.on('keyup', function (e)
+			{
+				console.log('coucou');
+				if(i>0)
+				{
+					that.dom.input.off();
+					setTimeout(function ()
+					{
+						that.dom.errors.remove('active').addClass('hidden');
+					}, 1000);
+				}else{
+					i++;
+				}
+			});
+		};
 
 
 

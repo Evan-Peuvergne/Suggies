@@ -473,11 +473,10 @@ h1, h2, h3, h4, h5, h6, .title {
     width: 100%;
     height: 5rem;
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     border-bottom: 1px solid #a4baba;
-    background-color: #fbfcfc;
-    overflow: hidden; }
-    /* line 29, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+    background-color: #fbfcfc; }
+    /* line 28, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
     .module.module-search .container form input {
       width: 100%;
       height: 4rem;
@@ -486,25 +485,54 @@ h1, h2, h3, h4, h5, h6, .title {
       font-weight: 200;
       color: #a4baba;
       text-transform: uppercase; }
-      /* line 39, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 38, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container form input::-webkit-input-placeholder {
         position: relative;
         top: 0.4rem; }
-      /* line 44, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 43, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container form input:-moz-placeholder {
         /* Firefox 18- */
         position: relative;
         top: 0.4rem; }
-      /* line 49, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 48, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container form input::-moz-placeholder {
         /* Firefox 19+ */
         position: relative;
         top: 0.4rem; }
-      /* line 54, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 53, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container form input:-ms-input-placeholder {
         position: relative;
         top: 0.4rem; }
-    /* line 61, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+    /* line 60, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+    .module.module-search .container form p.errors {
+      display: none;
+      font-size: 0.8rem;
+      position: absolute;
+      bottom: -2rem;
+      left: 0;
+      color: #e74c3c; }
+      /* line 69, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container form p.errors.active {
+        display: block;
+        -webkit-animation-name: 'ShowByFadeIn';
+                animation-name: 'ShowByFadeIn';
+        -webkit-animation-duration: 0.8s;
+                animation-duration: 0.8s;
+        -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both; }
+      /* line 79, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      .module.module-search .container form p.errors.hidden {
+        -webkit-animation-name: 'HideByFadeOut';
+                animation-name: 'HideByFadeOut';
+        -webkit-animation-duration: 0.8s;
+                animation-duration: 0.8s;
+        -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both; }
+    /* line 90, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
     .module.module-search .container form .loader {
       position: absolute;
       bottom: -2px;
@@ -513,14 +541,14 @@ h1, h2, h3, h4, h5, h6, .title {
       height: 3px;
       background-color: #80cdc7;
       transition: width 0.3s ease; }
-  /* line 75, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+  /* line 104, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
   .module.module-search .container ul {
     display: block;
     position: relative;
     z-index: 50;
     width: 100%;
     height: 21rem; }
-    /* line 85, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+    /* line 114, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
     .module.module-search .container ul li {
       display: inline-block;
       vertical-align: top;
@@ -531,17 +559,17 @@ h1, h2, h3, h4, h5, h6, .title {
       cursor: pointer;
       border-radius: 0.5rem;
       overflow: hidden; }
-      /* line 97, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 126, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container ul li:nth-child(5), .module.module-search .container ul li:nth-child(10) {
         margin-right: 0; }
-      /* line 103, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 132, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container ul li img {
         display: block;
         position: relative;
         z-index: 10;
         width: 100%;
         height: auto; }
-      /* line 113, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 142, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container ul li:after {
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -568,14 +596,14 @@ h1, h2, h3, h4, h5, h6, .title {
         color: #fefefe;
         border-radius: 0.5rem;
         transition: all 0.2s ease; }
-      /* line 137, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 166, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container ul li:hover:after {
         opacity: 1; }
-      /* line 143, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 172, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container ul li.loading:after {
         content: url(interface/assets/medias/images/loader_blanc.svg);
         opacity: 1; }
-      /* line 150, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+      /* line 179, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
       .module.module-search .container ul li.remove {
         -webkit-animation-name: 'HideByFadeOut';
                 animation-name: 'HideByFadeOut';
@@ -587,7 +615,7 @@ h1, h2, h3, h4, h5, h6, .title {
                 animation-timing-function: ease;
         -webkit-animation-fill-mode: both;
                 animation-fill-mode: both; }
-/* line 172, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+/* line 201, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
 .module.module-search.opened li {
   -webkit-animation-name: 'ShowByEnterFromBottom';
           animation-name: 'ShowByEnterFromBottom';
@@ -599,7 +627,7 @@ h1, h2, h3, h4, h5, h6, .title {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
-  /* line 180, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
+  /* line 209, /Users/evanpeuvergne/Documents/Projets/Suggies/interface/assets/styles/scss/search */
   .module.module-search.opened li:nth-child(n+6) {
     -webkit-animation-delay: 1.5s;
             animation-delay: 1.5s;
